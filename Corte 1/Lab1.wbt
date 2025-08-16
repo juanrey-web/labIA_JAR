@@ -1,0 +1,391 @@
+#VRML_SIM R2025a utf8
+WorldInfo {
+  basicTimeStep 16
+  physicsDisableTime 0.5
+}
+Viewpoint {
+  orientation -0.3816052597967692 0.42595993915444885 0.8203264934957168 1.6581790128822569
+  position 0.8528885493520841 -9.754735095152347 14.254246547051235
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/default/worlds/textures/interlaced_parquetry.jpg"
+      ]
+    }
+    roughness 1
+    metalness 0
+  }
+}
+Robot {
+  translation -0.08183964605722666 -6.520257017312426e-09 0.04938625113780571
+  rotation -2.478393250377442e-05 0.9999999957449642 8.885847344195026e-05 0.0003902911893911779
+  children [
+    GPS {
+      name "gps_carro"
+    }
+    InertialUnit {
+      name "inertial_carro"
+    }
+    Solid {
+      translation 0 0 0.06
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.2 0.2 0.8
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.4 0.25 0.12
+          }
+        }
+        Solid {
+          translation 0.15 0 -0.06
+          rotation 0 1 0 1.5708
+          children [
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                position -5.4266321889230476
+                axis 0 1 0
+                anchor 0 -0.125 0
+                dampingConstant 0.5
+                staticFriction 0.1
+              }
+              device [
+                RotationalMotor {
+                  name "motor_izq"
+                  maxTorque 30
+                }
+              ]
+              endPoint Solid {
+                translation 0 -0.125 0
+                rotation -0.8401136792851764 -0.38354134404774515 0.38354275287635486 4.539041978639549
+                children [
+                  Shape {
+                    appearance PBRAppearance {
+                      baseColor 0.1 0.1 0.1
+                      roughness 0.7
+                      metalness 0.3
+                    }
+                    geometry Cylinder {
+                      height 0.05
+                      radius 0.05
+                      subdivision 16
+                    }
+                  }
+                ]
+                boundingObject Cylinder {
+                  height 0.05
+                  radius 0.05
+                  subdivision 16
+                }
+                physics Physics {
+                  density -1
+                  mass 0.8
+                  damping Damping {
+                    angular 0.3
+                  }
+                }
+                linearVelocity -0.0561956403127114 5.973928413799449e-10 1.4859660426638536e-07
+                angularVelocity -9.149967092070704e-08 -7.172263940515515 -1.997222708944869e-08
+              }
+            }
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                position -5.4266516464218455
+                axis 0 1 0
+                anchor 0 0.125 0
+                dampingConstant 0.5
+                staticFriction 0.1
+              }
+              device [
+                RotationalMotor {
+                  name "motor_der"
+                  maxTorque 30
+                }
+              ]
+              endPoint Solid {
+                translation 0 0.125 0
+                rotation -0.8401200442016599 -0.38353437308790367 0.3835357818909076 4.539049441326972
+                children [
+                  Shape {
+                    appearance PBRAppearance {
+                      baseColor 0.1 0.1 0.1
+                      roughness 0.7
+                      metalness 0.3
+                    }
+                    geometry Cylinder {
+                      height 0.05
+                      radius 0.05
+                      subdivision 16
+                    }
+                  }
+                ]
+                boundingObject Cylinder {
+                  height 0.05
+                  radius 0.05
+                  subdivision 16
+                }
+                physics Physics {
+                  density -1
+                  mass 0.8
+                  damping Damping {
+                    angular 0.3
+                  }
+                }
+                linearVelocity -0.05619562828345261 5.974201603116921e-10 6.374036048762152e-08
+                angularVelocity -9.150037117590887e-08 -7.1722443867500365 -1.997231661991981e-08
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.7 0.7 0.7
+                roughness 0.5
+                metalness 0.5
+              }
+              geometry Cylinder {
+                height 0.25
+                radius 0.01
+                subdivision 12
+              }
+            }
+          ]
+          boundingObject Cylinder {
+            height 0.25
+            radius 0.01
+            subdivision 16
+          }
+          physics Physics {
+            density -1
+            mass 0.1
+          }
+        }
+        Solid {
+          translation -0.15 0 -0.06
+          rotation 0 1 0 1.5708
+          children [
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                position -1.1656243679584495
+                axis 0 1 0
+                anchor 0 -0.125 0
+                dampingConstant 0.5
+                staticFriction 0.1
+              }
+              endPoint Solid {
+                translation 0 -0.125 0
+                rotation 0.7314536712388969 -0.4821689635805387 0.4821707346892892 1.878545323505281
+                children [
+                  Shape {
+                    appearance PBRAppearance {
+                      baseColor 0.1 0.1 0.1
+                      roughness 0.7
+                      metalness 0.3
+                    }
+                    geometry Cylinder {
+                      height 0.05
+                      radius 0.05
+                      subdivision 16
+                    }
+                  }
+                ]
+                boundingObject Cylinder {
+                  height 0.05
+                  radius 0.05
+                  subdivision 16
+                }
+                physics Physics {
+                  density -1
+                  mass 0.8
+                  damping Damping {
+                    angular 0.3
+                  }
+                }
+                linearVelocity -0.05619538732163827 1.5869032133423735e-08 2.8093663046827187e-07
+                angularVelocity -3.0647414282101607e-07 -1.1201892298402487 -5.062780587882401e-08
+              }
+            }
+            HingeJoint {
+              jointParameters HingeJointParameters {
+                position -1.165641578969072
+                axis 0 1 0
+                anchor 0 0.125 0
+                dampingConstant 0.5
+                staticFriction 0.1
+              }
+              endPoint Solid {
+                translation 0 0.125 0
+                rotation 0.731447301930555 -0.48217379466008287 0.48217556578657894 1.8785536221620092
+                children [
+                  Shape {
+                    appearance PBRAppearance {
+                      baseColor 0.1 0.1 0.1
+                      roughness 0.7
+                      metalness 0.3
+                    }
+                    geometry Cylinder {
+                      height 0.05
+                      radius 0.05
+                      subdivision 16
+                    }
+                  }
+                ]
+                boundingObject Cylinder {
+                  height 0.05
+                  radius 0.05
+                  subdivision 16
+                }
+                physics Physics {
+                  density -1
+                  mass 0.8
+                  damping Damping {
+                    angular 0.3
+                  }
+                }
+                linearVelocity -0.056195373335601796 1.586903334076643e-08 1.9608038724391208e-07
+                angularVelocity -3.0647415778164466e-07 -1.1201889509953542 -5.062779924587899e-08
+              }
+            }
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.7 0.7 0.7
+                roughness 0.5
+                metalness 0.5
+              }
+              geometry Cylinder {
+                height 0.25
+                radius 0.01
+                subdivision 12
+              }
+            }
+          ]
+          boundingObject Cylinder {
+            height 0.25
+            radius 0.01
+            subdivision 16
+          }
+          physics Physics {
+            density -1
+            mass 0.1
+          }
+        }
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            position -1.847271695939311
+            axis 0 1 0
+            anchor 0 0 0.06
+            dampingConstant 0.03
+          }
+          device [
+            PositionSensor {
+              name "sensor_pendulo"
+            }
+          ]
+          endPoint Solid {
+            translation -0.24050587958486788 0 -0.008241643335349491
+            rotation 0 -1 0 1.8472716959393107
+            children [
+              Pose {
+                translation 0 0 -0.06
+                children [
+                  Shape {
+                    appearance PBRAppearance {
+                      baseColor 0.8 0.2 0.2
+                      roughness 1
+                      metalness 0
+                    }
+                    geometry Cylinder {
+                      height 0.5
+                      radius 0.01
+                    }
+                  }
+                ]
+              }
+              Pose {
+                translation 0 0 0.19
+                children [
+                  Shape {
+                    appearance PBRAppearance {
+                      baseColor 0.9 0.1 0.1
+                      roughness 0.5
+                      metalness 0.2
+                    }
+                    geometry Sphere {
+                      radius 0.05
+                    }
+                  }
+                ]
+              }
+            ]
+            name "pendulo"
+            boundingObject Group {
+              children [
+                Pose {
+                  translation 0 0 -0.06
+                  children [
+                    Cylinder {
+                      height 0.5
+                      radius 0.01
+                    }
+                  ]
+                }
+                Pose {
+                  translation 0 0 0.19
+                  children [
+                    Sphere {
+                      radius 0.05
+                    }
+                  ]
+                }
+              ]
+            }
+            physics Physics {
+              density -1
+              mass 0.5
+              centerOfMass [
+                0 0 0.19
+              ]
+            }
+            linearVelocity -0.05639594967388995 3.131460715576215e-08 -1.4278965391668525e-06
+            angularVelocity -3.47536115955435e-07 -3.825504526029187e-06 -5.592703419078994e-08
+          }
+        }
+      ]
+      name "carro"
+      boundingObject Box {
+        size 0.4 0.25 0.12
+      }
+      physics Physics {
+        density -1
+        mass 3
+        centerOfMass [
+          0 0 -0.06
+        ]
+        inertiaMatrix [
+          0.15 0.08 0.15
+          0 0 0
+        ]
+        damping Damping {
+          linear 0.3
+          angular 0.5
+        }
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.01 0.01 0.01
+  }
+  physics Physics {
+    density -1
+    mass 0.0001
+  }
+  controller "pendulo_controller"
+  linearVelocity -0.05608055784483104 8.090734288952334e-09 1.7557708060465165e-07
+  angularVelocity -3.4368929542883183e-07 4.4774541031907535e-07 -5.553329148721037e-08
+}
